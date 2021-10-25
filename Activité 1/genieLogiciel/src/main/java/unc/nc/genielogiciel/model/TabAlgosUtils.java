@@ -1,7 +1,5 @@
 package unc.nc.genielogiciel.model;
 
-import java.util.Arrays;
-
 /**
  * Classe effectuant diverses opérations arithmétiques.
  */
@@ -27,7 +25,7 @@ public final class TabAlgosUtils {
    * @return moyenne des valeurs du tableau.
    * @throw IllegalArgumentException si tab et null ou vide.
    **/
-  public static double moyenne(final int... tab) throws IllegalArgumentException {
+  public static double moyenne(final int... tab) {
     if (tab == null || tab.length == 0) {
       throw new IllegalArgumentException("Le tableau fourni ne doit pas être null ou vide.");
     }
@@ -64,19 +62,30 @@ public final class TabAlgosUtils {
   public static boolean similaires(final int[] tab1, final int... tab2) {
     // Tableau qui contiendra les index des éléments du tab2 déjà trouvés.
     int [] tab2FindedIndex = new int[tab1.length];
+
     // On remplit ce tableau de -1, afin de ne pas être gêné pour l'index 0.
-    Arrays.fill(tab2FindedIndex, -1);
+    for (int k = 0; k < tab2FindedIndex.length; k++) {
+      tab2FindedIndex[k] = -1;
+    }
 
     for (int i = 0; i < tab1.length; i++) {
       final int element = tab1[i];
       for (int j = 0; j < tab2.length; j++) {
-        final int finalJ = j;
-        // Si l'index du tableau 2 est présent dans notre tableau d'index trouvés,
+        // Si l'index du tableau 2 est présent dans notre tableau d'index trouvés...
+        boolean dejaFinded = false;
+        for (final int findedIndex : tab2FindedIndex) {
+          if (findedIndex == j) {
+            dejaFinded = true;
+            break;
+          }
+        }
+
         // On fait un continue car on ne veut pas recomparer un élément déjà trouvé.
-        if (Arrays.stream(tab2FindedIndex).anyMatch(k -> k == finalJ)) {
+        if (dejaFinded) {
           continue;
         }
-        // Si élément du tab1 égal du tab2, on ajoute l'index du tab2 dans
+
+        // Si élément du tab1 égal du tab2, on ajoute index du tab2 dans
         // tableau d'index trouvé, et on fait un break.
         if (element == tab2[j]) {
           tab2FindedIndex[i] = j;

@@ -43,6 +43,8 @@ activite-deux
        <li class="none"><strong>PMD</strong></li>
        <li class="none"><a href="checkstyle.html" title="Checkstyle">Checkstyle</a></li>
        <li class="none"><a href="spotbugs.html" title="SpotBugs">SpotBugs</a></li>
+       <li class="none"><a href="jacoco/index.html" title="JaCoCo">JaCoCo</a></li>
+       <li class="none"><a href="jacoco-aggregate/index.html" title="JaCoCo Aggregate">JaCoCo Aggregate</a></li>
       </ul></li>
     </ul>
       <a href="http://maven.apache.org/" title="Built by Maven" class="poweredBy">
@@ -91,67 +93,51 @@ activite-deux
 <th>Violation</th>
 <th>Line</th></tr>
 <tr class="b">
-<td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#useutilityclass">UseUtilityClass</a></td>
-<td>All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.</td>
-<td>6&#x2013;53</td></tr>
-<tr class="a">
-<td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_documentation.html#uncommentedemptyconstructor">UncommentedEmptyConstructor</a></td>
-<td>Document empty constructor</td>
-<td>10&#x2013;11</td></tr>
-<tr class="b">
-<td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#unnecessaryconstructor">UnnecessaryConstructor</a></td>
-<td>Avoid unnecessary constructors - the compiler will generate these for you</td>
-<td>10&#x2013;11</td></tr>
-<tr class="a">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#avoidfinallocalvariable">AvoidFinalLocalVariable</a></td>
 <td>Avoid using final local variables, turn them into fields</td>
 <td>32</td></tr>
-<tr class="b">
+<tr class="a">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#onlyonereturn">OnlyOneReturn</a></td>
 <td>A method should have only one exit point, and that should be the last statement in the method</td>
 <td>34</td></tr></table></div>
 <div class="section">
 <h4><a name="org.2Func.2Fnc.2FAppTest.java"></a>org/unc/nc/AppTest.java</h4>
 <table border="0" class="bodyTable">
-<tr class="a">
+<tr class="b">
 <th>Rule</th>
 <th>Violation</th>
 <th>Line</th></tr>
-<tr class="b">
+<tr class="a">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#atleastoneconstructor">AtLeastOneConstructor</a></td>
 <td>Each class should declare at least one constructor</td>
 <td>10&#x2013;18</td></tr>
-<tr class="a">
+<tr class="b">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier">CommentDefaultAccessModifier</a></td>
 <td>To avoid mistakes add a comment at the beginning of the shouldAnswerWithTrue method if you want a default access modifier</td>
 <td>15&#x2013;17</td></tr>
-<tr class="b">
+<tr class="a">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_errorprone.html#unnecessarybooleanassertion">UnnecessaryBooleanAssertion</a></td>
 <td>assertTrue(true) or similar statements are unnecessary</td>
 <td>16</td></tr></table></div>
 <div class="section">
 <h4><a name="org.2Func.2Fnc.2FCalculUtilsTest.java"></a>org/unc/nc/CalculUtilsTest.java</h4>
 <table border="0" class="bodyTable">
-<tr class="a">
+<tr class="b">
 <th>Rule</th>
 <th>Violation</th>
 <th>Line</th></tr>
-<tr class="b">
+<tr class="a">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#atleastoneconstructor">AtLeastOneConstructor</a></td>
 <td>Each class should declare at least one constructor</td>
-<td>10&#x2013;47</td></tr>
-<tr class="a">
-<td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junittestsshouldincludeassert">JUnitTestsShouldIncludeAssert</a></td>
-<td>JUnit tests should include assert() or fail()</td>
-<td>12&#x2013;14</td></tr>
+<td>10&#x2013;42</td></tr>
 <tr class="b">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts">JUnitTestContainsTooManyAsserts</a></td>
 <td>Unit tests should not contain more than 1 assert(s).</td>
-<td>42&#x2013;46</td></tr>
+<td>37&#x2013;41</td></tr>
 <tr class="a">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#lawofdemeter">LawOfDemeter</a></td>
 <td>Potential violation of Law of Demeter (object not created locally)</td>
-<td>44</td></tr></table></div></div>
+<td>39</td></tr></table></div></div>
 <div class="section">
 <h3><a name="Priority_4"></a>Priority 4</h3>
 <div class="section">
@@ -176,14 +162,14 @@ activite-deux
 <th>Priority</th>
 <th>Line</th></tr>
 <tr class="a">
-<td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#useutilityclass">UseUtilityClass</a></td>
-<td>All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.</td>
-<td>3</td>
-<td>6&#x2013;15</td></tr>
-<tr class="b">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#shortclassname">ShortClassName</a></td>
 <td>Avoid short class names like App</td>
 <td>4</td>
+<td>6&#x2013;15</td></tr>
+<tr class="b">
+<td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#useutilityclass">UseUtilityClass</a></td>
+<td>All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.</td>
+<td>3</td>
 <td>6&#x2013;15</td></tr>
 <tr class="a">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#systemprintln">SystemPrintln</a></td>
@@ -199,26 +185,11 @@ activite-deux
 <th>Priority</th>
 <th>Line</th></tr>
 <tr class="a">
-<td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#useutilityclass">UseUtilityClass</a></td>
-<td>All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.</td>
-<td>3</td>
-<td>6&#x2013;53</td></tr>
-<tr class="b">
-<td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_documentation.html#uncommentedemptyconstructor">UncommentedEmptyConstructor</a></td>
-<td>Document empty constructor</td>
-<td>3</td>
-<td>10&#x2013;11</td></tr>
-<tr class="a">
-<td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#unnecessaryconstructor">UnnecessaryConstructor</a></td>
-<td>Avoid unnecessary constructors - the compiler will generate these for you</td>
-<td>3</td>
-<td>10&#x2013;11</td></tr>
-<tr class="b">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#avoidfinallocalvariable">AvoidFinalLocalVariable</a></td>
 <td>Avoid using final local variables, turn them into fields</td>
 <td>3</td>
 <td>32</td></tr>
-<tr class="a">
+<tr class="b">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#onlyonereturn">OnlyOneReturn</a></td>
 <td>A method should have only one exit point, and that should be the last statement in the method</td>
 <td>3</td>
@@ -226,22 +197,22 @@ activite-deux
 <div class="section">
 <h3><a name="org.2Func.2Fnc.2FAppTest.java"></a>org/unc/nc/AppTest.java</h3>
 <table border="0" class="bodyTable">
-<tr class="b">
+<tr class="a">
 <th>Rule</th>
 <th>Violation</th>
 <th>Priority</th>
 <th>Line</th></tr>
-<tr class="a">
+<tr class="b">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#atleastoneconstructor">AtLeastOneConstructor</a></td>
 <td>Each class should declare at least one constructor</td>
 <td>3</td>
 <td>10&#x2013;18</td></tr>
-<tr class="b">
+<tr class="a">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier">CommentDefaultAccessModifier</a></td>
 <td>To avoid mistakes add a comment at the beginning of the shouldAnswerWithTrue method if you want a default access modifier</td>
 <td>3</td>
 <td>15&#x2013;17</td></tr>
-<tr class="a">
+<tr class="b">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_errorprone.html#unnecessarybooleanassertion">UnnecessaryBooleanAssertion</a></td>
 <td>assertTrue(true) or similar statements are unnecessary</td>
 <td>3</td>
@@ -249,31 +220,26 @@ activite-deux
 <div class="section">
 <h3><a name="org.2Func.2Fnc.2FCalculUtilsTest.java"></a>org/unc/nc/CalculUtilsTest.java</h3>
 <table border="0" class="bodyTable">
-<tr class="b">
+<tr class="a">
 <th>Rule</th>
 <th>Violation</th>
 <th>Priority</th>
 <th>Line</th></tr>
-<tr class="a">
+<tr class="b">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#atleastoneconstructor">AtLeastOneConstructor</a></td>
 <td>Each class should declare at least one constructor</td>
 <td>3</td>
-<td>10&#x2013;47</td></tr>
-<tr class="b">
-<td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junittestsshouldincludeassert">JUnitTestsShouldIncludeAssert</a></td>
-<td>JUnit tests should include assert() or fail()</td>
-<td>3</td>
-<td>12&#x2013;14</td></tr>
+<td>10&#x2013;42</td></tr>
 <tr class="a">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts">JUnitTestContainsTooManyAsserts</a></td>
 <td>Unit tests should not contain more than 1 assert(s).</td>
 <td>3</td>
-<td>42&#x2013;46</td></tr>
+<td>37&#x2013;41</td></tr>
 <tr class="b">
 <td><a class="externalLink" href="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#lawofdemeter">LawOfDemeter</a></td>
 <td>Potential violation of Law of Demeter (object not created locally)</td>
 <td>3</td>
-<td>44</td></tr></table></div></div>
+<td>39</td></tr></table></div></div>
       </div>
     </div>
     <div class="clear">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2021-11-18T17:23:58.481">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2021-11-18T19:05:57.242">
 <file name="C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux\src\main\java\org\unc\nc\App.java">
 <violation beginline="6" endline="15" begincolumn="18" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="org.unc.nc" class="App" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#useutilityclass" priority="3">
 All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
@@ -12,15 +12,6 @@ System.out.println is used
 </violation>
 </file>
 <file name="C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux\src\main\java\org\unc\nc\CalculUtils.java">
-<violation beginline="6" endline="53" begincolumn="32" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="org.unc.nc" class="CalculUtils" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#useutilityclass" priority="3">
-All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
-</violation>
-<violation beginline="10" endline="11" begincolumn="10" endcolumn="3" rule="UnnecessaryConstructor" ruleset="Code Style" package="org.unc.nc" class="CalculUtils" method="CalculUtils" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#unnecessaryconstructor" priority="3">
-Avoid unnecessary constructors - the compiler will generate these for you
-</violation>
-<violation beginline="10" endline="11" begincolumn="10" endcolumn="3" rule="UncommentedEmptyConstructor" ruleset="Documentation" package="org.unc.nc" class="CalculUtils" method="CalculUtils" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_documentation.html#uncommentedemptyconstructor" priority="3">
-Document empty constructor
-</violation>
 <violation beginline="32" endline="32" begincolumn="11" endcolumn="22" rule="AvoidFinalLocalVariable" ruleset="Code Style" package="org.unc.nc" class="CalculUtils" method="maFonction" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#avoidfinallocalvariable" priority="3">
 Avoid using final local variables, turn them into fields
 </violation>
@@ -40,16 +31,13 @@ assertTrue(true) or similar statements are unnecessary
 </violation>
 </file>
 <file name="C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux\src\test\java\org\unc\nc\CalculUtilsTest.java">
-<violation beginline="10" endline="47" begincolumn="15" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="org.unc.nc" class="CalculUtilsTest" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
+<violation beginline="10" endline="42" begincolumn="15" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="org.unc.nc" class="CalculUtilsTest" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
 Each class should declare at least one constructor
 </violation>
-<violation beginline="12" endline="14" begincolumn="17" endcolumn="3" rule="JUnitTestsShouldIncludeAssert" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testConstructor" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junittestsshouldincludeassert" priority="3">
-JUnit tests should include assert() or fail()
-</violation>
-<violation beginline="42" endline="46" begincolumn="17" endcolumn="3" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testDivisionZero" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+<violation beginline="37" endline="41" begincolumn="17" endcolumn="3" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testDivisionZero" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
 Unit tests should not contain more than 1 assert(s).
 </violation>
-<violation beginline="44" endline="44" begincolumn="55" endcolumn="76" rule="LawOfDemeter" ruleset="Design" package="org.unc.nc" class="CalculUtilsTest" method="testDivisionZero" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+<violation beginline="39" endline="39" begincolumn="55" endcolumn="76" rule="LawOfDemeter" ruleset="Design" package="org.unc.nc" class="CalculUtilsTest" method="testDivisionZero" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
 Potential violation of Law of Demeter (object not created locally)
 </violation>
 </file>

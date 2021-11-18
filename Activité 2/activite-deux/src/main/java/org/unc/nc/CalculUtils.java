@@ -5,9 +5,10 @@ package org.unc.nc;
  */
 public final class CalculUtils {
   /**
-   * Constructeur vide
+   * Constructeur vide.
    */
-  private CalculUtils() {}
+  private CalculUtils() {
+  }
 
   /**
    * Calcule la somme de deux entiers.

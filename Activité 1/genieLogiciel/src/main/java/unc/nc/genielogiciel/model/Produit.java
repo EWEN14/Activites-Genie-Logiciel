@@ -59,9 +59,8 @@ public class Produit {
   public final String getReference() {
     if (this.prix > 0) {
       return reference;
-    } else {
-      return null;
     }
+    return null;
   }
 
   /**

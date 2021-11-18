@@ -1,12 +1,17 @@
 package org.unc.nc;
 
 /**
- * Hello world!
+ * Hello world.
  *
  */
 public class App 
 {
-    public static void main( String[] args )
+    /**
+     * Simple Hello World.
+     *
+     * @param args arguments
+     */
+    public static void main( final String[] args )
     {
         System.out.println( "Hello World!" );
     }

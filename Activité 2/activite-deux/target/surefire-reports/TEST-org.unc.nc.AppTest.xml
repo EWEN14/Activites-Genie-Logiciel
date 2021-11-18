@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.unc.nc.AppTest" time="0.113" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux\target\test-classes;C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux\target\classes;C:\Users\Ewen CLEMENT\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\Ewen CLEMENT\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Ewen CLEMENT\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\Ewen CLEMENT\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Ewen CLEMENT\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\Ewen CLEMENT\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;"/>
+    <property name="java.vm.vendor" value="AdoptOpenJDK"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://adoptopenjdk.net/"/>
+    <property name="user.timezone" value="Pacific/Guadalcanal"/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="FR"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot\bin"/>
+    <property name="sun.java.command" value="C:\Users\Ewen CLEMENT\AppData\Local\Temp\surefire6945276282519171626\surefirebooter15356865066987355710.jar C:\Users\Ewen CLEMENT\AppData\Local\Temp\surefire6945276282519171626 2021-11-18T14-52-20_824-jvmRun1 surefire9445044093891727135tmp surefire_01518584611635703309tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux\target\test-classes;C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux\target\classes;C:\Users\Ewen CLEMENT\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\Ewen CLEMENT\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Ewen CLEMENT\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\Ewen CLEMENT\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Ewen CLEMENT\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\Ewen CLEMENT\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Ewen CLEMENT"/>
+    <property name="user.language" value="fr"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2021-04-20"/>
+    <property name="java.home" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\Ewen CLEMENT\AppData\Local\Temp\surefire6945276282519171626\surefirebooter15356865066987355710.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="11.0.11+9"/>
+    <property name="user.name" value="Ewen CLEMENT"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="Cp1252"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="AdoptOpenJDK-11.0.11+9"/>
+    <property name="localRepository" value="C:\Users\Ewen CLEMENT\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/AdoptOpenJDK/openjdk-support/issues"/>
+    <property name="java.io.tmpdir" value="C:\Users\Ewen CLEMENT\AppData\Local\Temp\"/>
+    <property name="idea.version" value="2021.2"/>
+    <property name="java.version" value="11.0.11"/>
+    <property name="user.dir" value="C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\AdoptOpenJDK\jdk-11.0.11.9-hotspot\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\VMware\VMware Player\bin\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Acer\abFiles\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\wamp64\bin\php\php7.4.8;C:\wamp64\bin\php\php7.4.6;C:\ProgramData\ComposerSetup\bin;C:\Program Files\Symfony;C:\Android\Sdk\tools;C:\Android\Sdk\build-tools;C:\Android\Sdk\platform-tools;C:\Program Files\Java\jre1.8.0_261\bin;C:\Users\Ewen CLEMENT\.gradle\wrapper\dists\gradle-6.1.1-all\cfmwm155h49vnt3hynmlrsdst\gradle-6.1.1\bin;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\MinGW\bin;C:\sqlite3;C:\Users\Ewen CLEMENT\AppData\Roaming\Python\Python39\Scripts;C:\Program Files\apache-maven-3.8.3\bin;C:\Users\Ewen CLEMENT\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\Ewen CLEMENT\AppData\Local\Programs\Python\Python39\;C:\Users\Ewen CLEMENT\AppData\Local\Programs\Python\Python38\Scripts\;C:\Users\Ewen CLEMENT\AppData\Local\Programs\Python\Python38\;C:\wamp64\bin\php\php7.4.8;C:\wamp64\bin\php\php7.4.6;C:\Users\Ewen CLEMENT\AppData\Local\Microsoft\WindowsApps;C:\Users\Ewen CLEMENT\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Ewen CLEMENT\AppData\Roaming\Composer\vendor\bin;C:\Users\Ewen CLEMENT\AppData\Local\Yarn\bin;C:\Users\Ewen CLEMENT\AppData\Roaming\npm;C:\Program Files\JetBrains\IntelliJ IDEA 2020.3.2\bin;C:\Users\Ewen CLEMENT\AppData\Local\gitkraken\bin;C:\Program Files\swipl\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="AdoptOpenJDK"/>
+    <property name="java.vm.version" value="11.0.11+9"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="55.0"/>
+  </properties>
+  <testcase name="shouldAnswerWithTrue" classname="org.unc.nc.AppTest" time="0.064"/>
+</testsuite>

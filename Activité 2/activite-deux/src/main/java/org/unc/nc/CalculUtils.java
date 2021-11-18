@@ -45,7 +45,7 @@ public final class CalculUtils {
    */
   public static int division(final int entier1, final int entier2) {
     if (entier2 == 0) {
-      throw new IllegalArgumentException("b ne doit pas être 0");
+      throw new IllegalArgumentException("entier2 ne doit pas être égal à 0");
     }
     return entier1 / entier2;
   }

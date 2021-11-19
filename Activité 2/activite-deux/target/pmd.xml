@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2021-11-18T19:05:57.242">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.38.0" timestamp="2021-11-19T15:00:39.300">
 <file name="C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux\src\main\java\org\unc\nc\App.java">
 <violation beginline="6" endline="15" begincolumn="18" endcolumn="1" rule="UseUtilityClass" ruleset="Design" package="org.unc.nc" class="App" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#useutilityclass" priority="3">
 All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
@@ -20,21 +20,63 @@ A method should have only one exit point, and that should be the last statement 
 </violation>
 </file>
 <file name="C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux\src\test\java\org\unc\nc\AppTest.java">
-<violation beginline="10" endline="18" begincolumn="1" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="org.unc.nc" class="AppTest" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
+<violation beginline="10" endline="18" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="org.unc.nc" class="AppTest" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
 Each class should declare at least one constructor
 </violation>
-<violation beginline="15" endline="17" begincolumn="3" endcolumn="3" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="org.unc.nc" class="AppTest" method="shouldAnswerWithTrue" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
-To avoid mistakes add a comment at the beginning of the shouldAnswerWithTrue method if you want a default access modifier
+<violation beginline="10" endline="18" begincolumn="8" endcolumn="1" rule="JUnit5TestShouldBePackagePrivate" ruleset="Best Practices" package="org.unc.nc" class="AppTest" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junit5testshouldbepackageprivate" priority="3">
+JUnit 5 tests should be package-private.
+</violation>
+<violation beginline="15" endline="17" begincolumn="10" endcolumn="3" rule="JUnit5TestShouldBePackagePrivate" ruleset="Best Practices" package="org.unc.nc" class="AppTest" method="shouldAnswerWithTrue" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junit5testshouldbepackageprivate" priority="3">
+JUnit 5 tests should be package-private.
 </violation>
 <violation beginline="16" endline="16" begincolumn="5" endcolumn="39" rule="UnnecessaryBooleanAssertion" ruleset="Error Prone" package="org.unc.nc" class="AppTest" method="shouldAnswerWithTrue" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_errorprone.html#unnecessarybooleanassertion" priority="3">
 assertTrue(true) or similar statements are unnecessary
 </violation>
 </file>
 <file name="C:\Users\Ewen CLEMENT\Documents\MASTER MIAGE\Ingénierie Logiciel (génie logiciel)\Activités Génie Logiciel\Activité 2\activite-deux\src\test\java\org\unc\nc\CalculUtilsTest.java">
-<violation beginline="10" endline="42" begincolumn="15" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="org.unc.nc" class="CalculUtilsTest" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
+<violation beginline="10" endline="42" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="org.unc.nc" class="CalculUtilsTest" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
 Each class should declare at least one constructor
 </violation>
-<violation beginline="37" endline="41" begincolumn="17" endcolumn="3" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testDivisionZero" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
+<violation beginline="10" endline="42" begincolumn="8" endcolumn="1" rule="JUnit5TestShouldBePackagePrivate" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junit5testshouldbepackageprivate" priority="3">
+JUnit 5 tests should be package-private.
+</violation>
+<violation beginline="12" endline="14" begincolumn="10" endcolumn="3" rule="JUnit5TestShouldBePackagePrivate" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testSomme" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junit5testshouldbepackageprivate" priority="3">
+JUnit 5 tests should be package-private.
+</violation>
+<violation beginline="12" endline="14" begincolumn="10" endcolumn="3" rule="CommentRequired" ruleset="Documentation" package="org.unc.nc" class="CalculUtilsTest" method="testSomme" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="17" endline="19" begincolumn="10" endcolumn="3" rule="JUnit5TestShouldBePackagePrivate" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testSommeFalse" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junit5testshouldbepackageprivate" priority="3">
+JUnit 5 tests should be package-private.
+</violation>
+<violation beginline="17" endline="19" begincolumn="10" endcolumn="3" rule="CommentRequired" ruleset="Documentation" package="org.unc.nc" class="CalculUtilsTest" method="testSommeFalse" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="22" endline="24" begincolumn="10" endcolumn="3" rule="JUnit5TestShouldBePackagePrivate" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testMaFonction" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junit5testshouldbepackageprivate" priority="3">
+JUnit 5 tests should be package-private.
+</violation>
+<violation beginline="22" endline="24" begincolumn="10" endcolumn="3" rule="CommentRequired" ruleset="Documentation" package="org.unc.nc" class="CalculUtilsTest" method="testMaFonction" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="27" endline="29" begincolumn="10" endcolumn="3" rule="JUnit5TestShouldBePackagePrivate" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testMaFonction2" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junit5testshouldbepackageprivate" priority="3">
+JUnit 5 tests should be package-private.
+</violation>
+<violation beginline="27" endline="29" begincolumn="10" endcolumn="3" rule="CommentRequired" ruleset="Documentation" package="org.unc.nc" class="CalculUtilsTest" method="testMaFonction2" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="32" endline="34" begincolumn="10" endcolumn="3" rule="JUnit5TestShouldBePackagePrivate" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testDivision" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junit5testshouldbepackageprivate" priority="3">
+JUnit 5 tests should be package-private.
+</violation>
+<violation beginline="32" endline="34" begincolumn="10" endcolumn="3" rule="CommentRequired" ruleset="Documentation" package="org.unc.nc" class="CalculUtilsTest" method="testDivision" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="37" endline="41" begincolumn="10" endcolumn="3" rule="JUnit5TestShouldBePackagePrivate" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testDivisionZero" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junit5testshouldbepackageprivate" priority="3">
+JUnit 5 tests should be package-private.
+</violation>
+<violation beginline="37" endline="41" begincolumn="10" endcolumn="3" rule="CommentRequired" ruleset="Documentation" package="org.unc.nc" class="CalculUtilsTest" method="testDivisionZero" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_documentation.html#commentrequired" priority="3">
+Public method and constructor comments are required
+</violation>
+<violation beginline="37" endline="41" begincolumn="10" endcolumn="3" rule="JUnitTestContainsTooManyAsserts" ruleset="Best Practices" package="org.unc.nc" class="CalculUtilsTest" method="testDivisionZero" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_bestpractices.html#junittestcontainstoomanyasserts" priority="3">
 Unit tests should not contain more than 1 assert(s).
 </violation>
 <violation beginline="39" endline="39" begincolumn="55" endcolumn="76" rule="LawOfDemeter" ruleset="Design" package="org.unc.nc" class="CalculUtilsTest" method="testDivisionZero" externalInfoUrl="https://pmd.github.io/pmd-6.38.0/pmd_rules_java_design.html#lawofdemeter" priority="3">

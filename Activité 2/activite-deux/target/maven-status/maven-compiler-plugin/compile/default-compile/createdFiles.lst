@@ -1,2 +1,7 @@
-org\unc\nc\App.class
+org\unc\nc\exceptions\CaractereInterditException.class
+org\unc\nc\GrilleImpl.class
 org\unc\nc\CalculUtils.class
+org\unc\nc\exceptions\ValeurImpossibleException.class
+org\unc\nc\exceptions\HorsBornesException.class
+org\unc\nc\App.class
+org\unc\nc\Grille.class

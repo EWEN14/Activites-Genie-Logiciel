@@ -37,6 +37,6 @@ public class CalculUtilsTest {
   public void testDivisionZero() {
     final Exception exception = assertThrows(IllegalArgumentException.class, () -> CalculUtils.division(4, 0));
     assertEquals("entier2 ne doit pas être égal à 0", exception.getMessage(),
-            "On ne peut pas diviser par 0");
+            "Le message d'erreur renvoyé n'est pas celui attendu.");
   }
 }

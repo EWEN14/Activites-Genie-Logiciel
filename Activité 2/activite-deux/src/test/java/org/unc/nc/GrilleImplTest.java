@@ -9,6 +9,9 @@ import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Test de l'implémentation de la Grille de sudoku.
+ */
 public class GrilleImplTest {
 
   // grille d'exemple utilisée sur plusieurs test.
@@ -142,7 +145,7 @@ public class GrilleImplTest {
     // on va tenter de récupérer la valeur à y = 9 (colonne 10)
     // alors que l'index maximum est de 8 (colonne 9).
     final Exception exception = assertThrows(
-            HorsBornesException.class, () -> this.grilleImpl.getValue(6, 9));
+            HorsBornesException.class, () -> this.grilleImpl.getValue(6, 9  ));
 
     assertEquals("Au moins l'une des deux coordonnées dépasse la dimension de la grille.", exception.getMessage(),
             "Le message d'erreur renvoyé n'est pas celui attendu.");

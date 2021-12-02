@@ -19,6 +19,7 @@ public class GrilleImplTest {
   GrilleImpl grilleImpl = new GrilleImpl(9);
 
   // grilles utilisées pour couvrir tous les cas de dimension de grille du constructeur
+  // et aussi pour les tests de caractère déjà présent dans un bloc
   GrilleImpl grilleDim4 = new GrilleImpl(4);
   GrilleImpl grilleDim16 = new GrilleImpl(16);
   GrilleImpl grilleDim25 = new GrilleImpl(25);
@@ -69,7 +70,7 @@ public class GrilleImplTest {
     final Exception exception = assertThrows(
             ValeurImpossibleException.class, () -> this.grilleImpl.setValue(2, 7, '8'));
 
-    assertEquals("Ce caractère est déjà présent dans la ligne de la case visée", exception.getMessage(),
+    assertEquals("Le caractère 8 est déjà présent dans la ligne de la case visée", exception.getMessage(),
             "Le message d'erreur renvoyé n'est pas celui attendu.");
   }
 
@@ -83,7 +84,75 @@ public class GrilleImplTest {
     final Exception exception = assertThrows(
             ValeurImpossibleException.class, () -> this.grilleImpl.setValue(7, 3, '4'));
 
-    assertEquals("Ce caractère est déjà présent dans la colonne de la case visée", exception.getMessage(),
+    assertEquals("Le caractère 4 est déjà présent dans la colonne de la case visée", exception.getMessage(),
+            "Le message d'erreur renvoyé n'est pas celui attendu.");
+  }
+
+  @Test
+  public void testSetValueAlreadyInBloc4() throws ValeurImpossibleException, CaractereInterditException,
+          HorsBornesException {
+    char value = '2';
+    // on met à la grille de dimension 4 le caractère '2' à la ligne 3, colonne 3
+    grilleDim4.setValue(2,2,value);
+
+    // on va tenter d'insérer un autre '2', à la ligne 3, colonne 3
+    // donc il n'est pas sur la même ligne ni même colonne, mais même bloc, donc erreur.
+    final Exception exception = assertThrows(
+            ValeurImpossibleException.class, () -> this.grilleDim4.setValue(3, 3, value));
+
+    assertEquals("Le caractère "+ value +
+                    " est déjà présent dans le bloc où vous tentez l'insertion.", exception.getMessage(),
+            "Le message d'erreur renvoyé n'est pas celui attendu.");
+  }
+
+  @Test
+  public void testSetValueAlreadyInBloc9() throws ValeurImpossibleException, CaractereInterditException,
+          HorsBornesException {
+    char value = '9';
+    // on met à la grille de dimension 9 le caractère '9' à la ligne 7, colonne 8
+    grilleImpl.setValue(6,7,value);
+
+    // on va tenter d'insérer un autre '9', à la ligne 9, colonne 9
+    // donc il n'est pas sur la même ligne ni même colonne, mais même bloc, donc erreur.
+    final Exception exception = assertThrows(
+            ValeurImpossibleException.class, () -> this.grilleImpl.setValue(8, 8, value));
+
+    assertEquals("Le caractère "+ value +
+                    " est déjà présent dans le bloc où vous tentez l'insertion.", exception.getMessage(),
+            "Le message d'erreur renvoyé n'est pas celui attendu.");
+  }
+
+  @Test
+  public void testSetValueAlreadyInBloc16() throws ValeurImpossibleException, CaractereInterditException,
+          HorsBornesException {
+    char value = 'b';
+    // on met à la grille de dimension 16 le caractère 'b' à la ligne 13, colonne 8
+    grilleDim16.setValue(12,7,value);
+
+    // on va tenter d'insérer un autre 'b', à la ligne 16, colonne 5
+    // donc il n'est pas sur la même ligne ni même colonne, mais même bloc, donc erreur.
+    final Exception exception = assertThrows(
+            ValeurImpossibleException.class, () -> this.grilleDim16.setValue(15, 4, value));
+
+    assertEquals("Le caractère "+ value +
+                    " est déjà présent dans le bloc où vous tentez l'insertion.", exception.getMessage(),
+            "Le message d'erreur renvoyé n'est pas celui attendu.");
+  }
+
+  @Test
+  public void testSetValueAlreadyInBloc25() throws ValeurImpossibleException, CaractereInterditException,
+          HorsBornesException {
+    char value = 'n';
+    // on met à la grille de dimension 25 le caractère 'n' à la ligne 24, colonne 23
+    grilleDim25.setValue(23,22,value);
+
+    // on va tenter d'insérer un autre 'n', à la ligne 25, colonne 25
+    // donc il n'est pas sur la même ligne ni même colonne, mais même bloc, donc erreur.
+    final Exception exception = assertThrows(
+            ValeurImpossibleException.class, () -> this.grilleDim25.setValue(24, 24, value));
+
+    assertEquals("Le caractère "+ value +
+                    " est déjà présent dans le bloc où vous tentez l'insertion.", exception.getMessage(),
             "Le message d'erreur renvoyé n'est pas celui attendu.");
   }
 
@@ -127,6 +196,15 @@ public class GrilleImplTest {
   public void testGetValue() throws HorsBornesException {
     // on récupère la valeur ligne 3, colonne 4, qui contient un caractère vide '@'
     assertEquals('@',this.grilleImpl.getValue(2,3),"Les deux caractères ne correspondent pas");
+  }
+
+  @Test
+  public void testGetValueAfterSet() throws CaractereInterditException,
+          ValeurImpossibleException, HorsBornesException {
+    grilleImpl.setValue(1,1,'@');
+
+    char caractere = grilleImpl.getValue(1,1);
+    assertEquals('@', this.grilleImpl.getValue(1,1), "Les deux caractères ne correspondent pas");
   }
 
   @Test

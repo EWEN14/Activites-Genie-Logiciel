@@ -126,6 +126,7 @@
             <printFailingErrors>true</printFailingErrors>
             <failOnViolation>false</failOnViolation>
             <skip>false</skip>
+            <minimumPriority>1</minimumPriority>
             <skipEmptyReport>false</skipEmptyReport>
           </configuration>
           <executions>
@@ -246,6 +247,9 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
         <version>3.15.0</version>
+        <configuration>
+            <minimumPriority>1</minimumPriority>
+        </configuration>
       </plugin>
 
       <plugin>

@@ -188,7 +188,7 @@ public class GrilleImplTest {
     final Exception exception = assertThrows(
             CaractereInterditException.class, () -> this.grilleImpl.setValue(1, 2, '0'));
 
-    assertEquals("Ce caractère n'est pas autorisé dans cette grille.", exception.getMessage(),
+    assertEquals("Le caractère 0 n'est pas autorisé dans cette grille.", exception.getMessage(),
             "Le message d'erreur renvoyé n'est pas celui attendu.");
   }
 

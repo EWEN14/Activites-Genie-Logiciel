@@ -139,7 +139,7 @@ public class GrilleImpl implements Grille, Resolveur {
     // si la valeur n'est pas présente dans les valeurs possibles,
     // ou que ce n'est pas un caractère vide, on renvoie une erreur.
     if (!Chars.contains(this.caracteresPossibles, value) && value != Grille.EMPTY) {
-      throw new CaractereInterditException("Ce caractère n'est pas autorisé dans cette grille.");
+      throw new CaractereInterditException("Le caractère " + value + " n'est pas autorisé dans cette grille.");
     }
     // si pas d'erreur on renvoie true
     return true;
@@ -209,18 +209,18 @@ public class GrilleImpl implements Grille, Resolveur {
           for (char caracteresPossible : this.caracteresPossibles) {
             if (checkAll(row, column, caracteresPossible)) {
               this.setValue(row, column, caracteresPossible);
-            }
-            if (solve()) {
-              return true;
-            } else {
-              this.setValue(row, column, Grille.EMPTY);
+              if (solve()) {
+                return true;
+              } else {
+                this.setValue(row, column, Grille.EMPTY);
+              }
             }
           }
           return false;
         }
       }
     }
-    return true;
+    return true; // sudoku résolu
   }
 
   /**

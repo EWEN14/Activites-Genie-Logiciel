@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.unc.nc.GrilleImplTest" time="0.032" tests="19" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.unc.nc.GrilleParserUtilsTest" time="0.038" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -61,23 +61,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="testSetValueCaractereInterdit" classname="org.unc.nc.GrilleImplTest" time="0"/>
-  <testcase name="testGetValueAfterSet" classname="org.unc.nc.GrilleImplTest" time="0"/>
-  <testcase name="testSetValueAlreadyInRow" classname="org.unc.nc.GrilleImplTest" time="0"/>
-  <testcase name="testGetValue" classname="org.unc.nc.GrilleImplTest" time="0"/>
-  <testcase name="testGetValueHorsBornesLigne" classname="org.unc.nc.GrilleImplTest" time="0"/>
-  <testcase name="testSetValueAlreadyInBloc16" classname="org.unc.nc.GrilleImplTest" time="0"/>
-  <testcase name="testSetValueAlreadyInBloc25" classname="org.unc.nc.GrilleImplTest" time="0"/>
-  <testcase name="testSetValueAlreadyInColumn" classname="org.unc.nc.GrilleImplTest" time="0"/>
-  <testcase name="testGetDimension" classname="org.unc.nc.GrilleImplTest" time="0.002"/>
-  <testcase name="testSetValueAlreadyInBloc4" classname="org.unc.nc.GrilleImplTest" time="0.004"/>
-  <testcase name="testSetValueAlreadyInBloc9" classname="org.unc.nc.GrilleImplTest" time="0.002"/>
-  <testcase name="testGetValueHorsBornesColonne" classname="org.unc.nc.GrilleImplTest" time="0.001"/>
-  <testcase name="testSetValueHorsBornesLigne" classname="org.unc.nc.GrilleImplTest" time="0.002"/>
-  <testcase name="testCompleteTrue" classname="org.unc.nc.GrilleImplTest" time="0.002"/>
-  <testcase name="testSetValueHorsBornesColonne" classname="org.unc.nc.GrilleImplTest" time="0.002"/>
-  <testcase name="testGrille" classname="org.unc.nc.GrilleImplTest" time="0.001"/>
-  <testcase name="testSetValueGood" classname="org.unc.nc.GrilleImplTest" time="0.001"/>
-  <testcase name="testGrilleBadDimension" classname="org.unc.nc.GrilleImplTest" time="0.001"/>
-  <testcase name="testCompleteFalse" classname="org.unc.nc.GrilleImplTest" time="0.003"/>
+  <testcase name="grille9solve" classname="org.unc.nc.GrilleParserUtilsTest" time="0.035"/>
 </testsuite>

@@ -5,6 +5,8 @@ import org.unc.nc.exceptions.CaractereInterditException;
 import org.unc.nc.exceptions.HorsBornesException;
 import org.unc.nc.exceptions.ValeurImpossibleException;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -243,5 +245,56 @@ public class GrilleImplTest {
   public void testCompleteFalse() {
     // par défaut la grille n'est pas complète
     assertFalse(this.grilleImpl.complete());
+  }
+
+  @Test
+  public void testCheckAllTrue() throws CaractereInterditException, HorsBornesException {
+    // test de la méthode qui vérifie toutes les contraintes.
+    assertTrue(grilleImpl.checkAll(3,8,'4'));
+  }
+
+  @Test
+  public void testCheckAllFalseCaractere() throws CaractereInterditException, HorsBornesException {
+    // Le caractère 'b' n'est pas autorisé dans une grille 9*9
+    assertFalse(grilleImpl.checkAll(3,8,'b'));
+  }
+
+  @Test
+  public void testCheckAllTrueCaractere() throws CaractereInterditException, HorsBornesException {
+    // @ est autorisé pour remettre une case à vide
+    assertTrue(grilleImpl.checkAll(3,8,'@'));
+  }
+
+  @Test
+  public void testCheckAllFalseDimensionX() throws CaractereInterditException, HorsBornesException {
+    // 10 n'est pas une coordonnée de x autorisée
+    assertFalse(grilleImpl.checkAll(10,8,'3'));
+  }
+
+  @Test
+  public void testCheckAllFalseDimensionY() throws CaractereInterditException, HorsBornesException {
+    // 10 n'est pas une coordonnée de y autorisée
+    assertFalse(grilleImpl.checkAll(1,10,'3'));
+  }
+
+  @Test
+  public void grille9solve() throws CaractereInterditException, IOException, HorsBornesException, ValeurImpossibleException {
+    GrilleImpl grille9 = new GrilleImpl(9);
+    grille9.grille = new char[][]{
+            {'@', '6', '@', '@', '@', '1', '@', '@', '@'},
+            {'@', '7', '@', '@', '@', '4', '@', '@', '3'},
+            {'8', '@', '@', '7', '3', '@', '1', '@', '@'},
+            {'@', '@', '9', '@', '@', '@', '8', '@', '@'},
+            {'@', '@', '@', '@', '@', '@', '7', '1', '@'},
+            {'4', '3', '@', '@', '@', '@', '@', '2', '@'},
+            {'@', '1', '@', '2', '@', '@', '@', '9', '@'},
+            {'@', '@', '@', '8', '6', '@', '@', '@', '@'},
+            {'6', '@', '@', '@', '@', '@', '5', '@', '7'}
+    };
+
+    grille9.solve();
+
+    // test qui vérifie que la grille a bien été complétée.
+    assertTrue(grille9.complete());
   }
 }

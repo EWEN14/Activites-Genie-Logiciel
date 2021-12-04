@@ -75,5 +75,5 @@ public interface Grille {
    * @throw HorsBornesException si x ou y sont hors bornes (0-8)
    * @throw CaractereInterditException si value n'est pas un caractère autorise ('1', ..., '9', ...)
    */
-  boolean possible(int x, int y, char value) throws HorsBornesException, CaractereInterditException;
+  void possible(int x, int y, char value) throws HorsBornesException, CaractereInterditException;
 }

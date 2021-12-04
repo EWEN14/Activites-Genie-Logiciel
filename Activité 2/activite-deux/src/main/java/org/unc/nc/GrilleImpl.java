@@ -1,9 +1,7 @@
 package org.unc.nc;
 
 import com.google.common.primitives.Chars;
-
 import java.util.Arrays;
-
 import org.unc.nc.exceptions.CaractereInterditException;
 import org.unc.nc.exceptions.HorsBornesException;
 import org.unc.nc.exceptions.ValeurImpossibleException;
@@ -54,7 +52,7 @@ public class GrilleImpl implements Grille, Resolveur {
    * @param value valeur à mettre dans la case
    * @throw HorsBornesException si x ou y sont hors bornes (0-8)
    * @throw ValeurImpossibleException si la valeur est interdite
-   * aux vues des autres valeurs de la grille
+   *      aux vues des autres valeurs de la grille
    * @throw CaractereInterditException si value n'est pas un caractere autorise ('1',...,'9')
    */
   public void setValue(int x, int y, char value) throws ValeurImpossibleException,
@@ -63,20 +61,21 @@ public class GrilleImpl implements Grille, Resolveur {
       // on vérifie que les coordonnées x et y sont cohérentes et que la valeur est acceptable.
       possible(x, y, value);
       // si la ligne de la case que l'on veut set contient déjà cette valeur, on renvoie une erreur.
-      if (!this.checkLigne(x,y,value)) {
+      if (!this.checkLigne(x, y, value)) {
         throw new ValeurImpossibleException(
                 "Le caractère " + value + " est déjà présent dans la ligne de la case visée");
       }
 
-      // si la colonne de la case que l'on veut set contient déjà cette valeur, on renvoie une erreur.
-      if (!this.checkColumn(x,y,value)) {
+      // si la colonne de la case que l'on veut set contient déjà cette valeur,
+      // on renvoie une erreur.
+      if (!this.checkColumn(x, y, value)) {
         throw new ValeurImpossibleException(
-                "Le caractère "+ value +" est déjà présent dans la colonne de la case visée");
+                "Le caractère " + value + " est déjà présent dans la colonne de la case visée");
       }
 
-      if (!this.verifRegion(x,y,value)) {
-        throw new ValeurImpossibleException("Le caractère "+ value +
-                " est déjà présent dans le bloc où vous tentez l'insertion.");
+      if (!this.verifRegion(x, y, value)) {
+        throw new ValeurImpossibleException("Le caractère " + value
+                + " est déjà présent dans le bloc où vous tentez l'insertion.");
       }
       // si pas d'erreurs, on affecte la valeur à la case
       this.grille[x][y] = value;
@@ -129,7 +128,7 @@ public class GrilleImpl implements Grille, Resolveur {
    * @throw HorsBornesException si x ou y sont hors bornes (0-8)
    * @throw CaractereInterditException si value n'est pas un caractère autorise ('1', ..., '9', ...)
    */
-  public boolean possible(int x, int y, char value)
+  public void possible(int x, int y, char value)
           throws HorsBornesException, CaractereInterditException {
     // si x ou y supérieur aux dimension, on renvoie une erreur.
     if (x > (getDimension() - 1) || y > (getDimension() - 1)) {
@@ -139,10 +138,9 @@ public class GrilleImpl implements Grille, Resolveur {
     // si la valeur n'est pas présente dans les valeurs possibles,
     // ou que ce n'est pas un caractère vide, on renvoie une erreur.
     if (!Chars.contains(this.caracteresPossibles, value) && value != Grille.EMPTY) {
-      throw new CaractereInterditException("Le caractère " + value + " n'est pas autorisé dans cette grille.");
+      throw new CaractereInterditException(
+              "Le caractère " + value + " n'est pas autorisé dans cette grille.");
     }
-    // si pas d'erreur on renvoie true
-    return true;
   }
 
   /**
@@ -171,8 +169,8 @@ public class GrilleImpl implements Grille, Resolveur {
   /**
    * Méthode analysant le bloc dans lequel se trouve la valeur.
    *
-   * @param x coordonnée x
-   * @param y coordonnée y
+   * @param x     coordonnée x
+   * @param y     coordonnée y
    * @param value caractère
    * @return booléen
    */
@@ -198,11 +196,12 @@ public class GrilleImpl implements Grille, Resolveur {
    * Méthode de résolution de la grille de Sudoku par backtraking.
    *
    * @return boolean indiquant que la grille est résolue
-   * @throws HorsBornesException erreur de bornes
-   * @throws ValeurImpossibleException erreur de valeur
+   * @throws HorsBornesException        erreur de bornes
+   * @throws ValeurImpossibleException  erreur de valeur
    * @throws CaractereInterditException erreur de caractère
    */
-  public boolean solve() throws HorsBornesException, ValeurImpossibleException, CaractereInterditException {
+  public boolean solve() throws
+          HorsBornesException, ValeurImpossibleException, CaractereInterditException {
     for (int row = 0; row < this.getDimension(); row++) {
       for (int column = 0; column < this.getDimension(); column++) {
         if (this.grille[row][column] == Grille.EMPTY) {
@@ -224,18 +223,18 @@ public class GrilleImpl implements Grille, Resolveur {
   }
 
   /**
-   * Méthode vérifiant toutes les conditions
+   * Méthode vérifiant toutes les conditions.
    *
-   * @param x coordonnée x
-   * @param y coordonnée y
+   * @param x     coordonnée x
+   * @param y     coordonnée y
    * @param value caractère
    * @return booléen
-   * @throws ValeurImpossibleException erreur de valeur
    * @throws CaractereInterditException erreur de caractère
-   * @throws HorsBornesException erreur de bornes
+   * @throws HorsBornesException        erreur de bornes
    */
-  public boolean checkAll(int x, int y, char value) throws ValeurImpossibleException, CaractereInterditException, HorsBornesException {
-    return this.possible(x, y, value)
+  public boolean checkAll(int x, int y, char value) throws
+          CaractereInterditException, HorsBornesException {
+    return this.possibleBoolean(x, y, value)
             && this.checkLigne(x, y, value)
             && this.checkColumn(x, y, value)
             && this.verifRegion(x, y, value);
@@ -244,8 +243,8 @@ public class GrilleImpl implements Grille, Resolveur {
   /**
    * Vérifie que l'on peut insérer le caractère dans la ligne voulue.
    *
-   * @param x coordonnée x
-   * @param y coordonnée y
+   * @param x     coordonnée x
+   * @param y     coordonnée y
    * @param value caractère
    * @return booléen
    */
@@ -258,8 +257,8 @@ public class GrilleImpl implements Grille, Resolveur {
   /**
    * Vérifie que l'on peut insérer le caractère dans la colonne voulue.
    *
-   * @param x coordonnée x
-   * @param y coordonnée y
+   * @param x     coordonnée x
+   * @param y     coordonnée y
    * @param value caractère
    * @return booléen
    */
@@ -271,6 +270,28 @@ public class GrilleImpl implements Grille, Resolveur {
         return false;
       }
     }
+    return true;
+  }
+
+  /**
+   * Fonction possible, qui renvoie uniquement des booléens, pas d'exceptions.
+   *
+   * @param x coordonnée x
+   * @param y coordonnée y
+   * @param value caractère
+   * @return booléen
+   */
+  public boolean possibleBoolean(int x, int y, char value) {
+    // si x ou y supérieur aux dimension, on renvoie false.
+    if (x > (getDimension() - 1) || y > (getDimension() - 1)) {
+      return false;
+    }
+    // si la valeur n'est pas présente dans les valeurs possibles,
+    // ou que ce n'est pas un caractère vide, on renvoie false.
+    if (!Chars.contains(this.caracteresPossibles, value) && value != Grille.EMPTY) {
+      return false;
+    }
+    // si pas d'erreur on renvoie true
     return true;
   }
 }

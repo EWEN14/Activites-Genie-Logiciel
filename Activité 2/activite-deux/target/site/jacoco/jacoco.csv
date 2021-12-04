@@ -1,9 +1,0 @@
-GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
-activite-deux,org.unc.nc,Grille,0,104,0,0,0,1,0,1,0,1
-activite-deux,org.unc.nc,CalculUtils,0,26,0,4,0,8,0,5,0,3
-activite-deux,org.unc.nc,GrilleImpl,0,455,1,83,0,77,1,53,0,12
-activite-deux,org.unc.nc,App,7,0,0,0,3,0,2,0,2,0
-activite-deux,org.unc.nc,GrilleParserUtils,14,59,2,6,3,13,3,4,1,2
-activite-deux,org.unc.nc.exceptions,ValeurImpossibleException,0,4,0,0,0,2,0,1,0,1
-activite-deux,org.unc.nc.exceptions,CaractereInterditException,0,4,0,0,0,2,0,1,0,1
-activite-deux,org.unc.nc.exceptions,HorsBornesException,0,4,0,0,0,2,0,1,0,1

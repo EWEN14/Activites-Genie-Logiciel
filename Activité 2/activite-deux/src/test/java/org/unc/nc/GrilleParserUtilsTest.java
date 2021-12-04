@@ -49,7 +49,7 @@ import static org.junit.jupiter.api.Assertions.*;
   }
 
   @Test
-  public void grille9solve() throws CaractereInterditException, IOException, HorsBornesException, ValeurImpossibleException {
+  private void grille9solve() throws CaractereInterditException, IOException, HorsBornesException, ValeurImpossibleException {
     GrilleImpl grille9 = new GrilleImpl(9);
     String path = "src/test/resources/sudoku-9x9.txt";
     File file = new File(path);
@@ -66,7 +66,7 @@ import static org.junit.jupiter.api.Assertions.*;
   }
 
   @Test
-  public void grille16solve() throws CaractereInterditException, IOException, HorsBornesException, ValeurImpossibleException {
+  private void grille16solve() throws CaractereInterditException, IOException, HorsBornesException, ValeurImpossibleException {
     GrilleImpl grille16 = new GrilleImpl(16);
     String path = "src/test/resources/sudoku-16x16.txt";
     File file = new File(path);
